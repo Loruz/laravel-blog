@@ -1,7 +1,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
 	<div class="navbar-brand">
-		<a class="navbar-item" href="https://bulma.io">
-			<img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+		<a class="navbar-item" href="{{route('posts')}}">
+			<span class="has-text-weight-bold">MEDIUM CLONE</span>
 		</a>
 
 		<a role="button"
@@ -61,7 +61,7 @@
 						</a>
 					@else
 						{{--Later add user dropdown--}}
-						<a class="dropdown-item" href="{{ route('logout') }}"
+						<a class="button is-light" href="{{ route('logout') }}"
 						   onclick="event.preventDefault();  document.getElementById('logout-form').submit();">
 							Logout
 						</a>

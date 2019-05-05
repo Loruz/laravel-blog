@@ -5,7 +5,7 @@
         <div class="container is-fluid">
             <div class="columns">
                 <div class="column is-half is-offset-one-quarter">
-                    <h1 class="title">Let's get you ready for selling</h1>
+                    <h1 class="title">Write what you think!</h1>
                     <form action="#" method="post" class="form">
                         {{csrf_field()}}
                         <div class="field">
