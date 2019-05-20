@@ -6,7 +6,7 @@
             <div class="columns">
                 <div class="column is-half is-offset-one-quarter">
                     <h1 class="title">Sign in</h1>
-                    <form action="#" method="post" class="form">
+                    <form action="" method="post" class="form">
                         {{csrf_field()}}
                         <div class="field">
                             <label for="email" class="label">Email</label>
