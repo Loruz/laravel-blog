@@ -7,7 +7,7 @@
 
     <aside class="menu">
         <p class="menu-label">
-            <a href="index.html">Home Page</a>
+            <a href="{{route('home')}}">Home Page</a>
         </p>
         <p class="menu-label">
             <a href="about.html">About Page</a>
