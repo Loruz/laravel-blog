@@ -1,47 +1,49 @@
 @import 'node_modules/bulma/bulma';
 
-.content {
-    padding-bottom: 50px;
+a {
+    color: #ff3860;
+}
+.main-content {
+    padding-top: 2.5rem;
+}
+
+.content p, .header-content, .footer, .nav-header, .input, .textarea, .nav-footer p {
+    font-family: 'Crimson Text', serif;
+}
+
+.button:focus {
+    border-color: #4a4a4a;
+    box-shadow: 0 0 0 #4a4a4a;
+}
+
+.menu-label:not(:first-child) {
+    margin-top: 0;
 }
 
 .content p {
-    padding-bottom: 15px;
+    font-size: 1.1em;
 }
 
-.footer-custom {
-    padding: 30px;
-}
-
-.single-content p {
-    padding-bottom: 15px;
-}
-
-.single-content {
-    padding-bottom: 50px;
+.header-content small {
+    font-size: 1.0em;
 }
 
 .header-content {
     padding-bottom: 20px;
 }
 
-.subheader-content {
+.header-content img {
     padding-bottom: 20px;
 }
 
-
-/* colour changes to the bulma framework */
-a {
-    color: #ff3860;
+.post-wrapper {
+    padding-bottom: 50px;
 }
 
-
-.tabs li.is-active a {
-    border-bottom-color: #ff3860;
-    color: #ff3860;
+.has-padding {
+    padding-bottom: 51px;
 }
 
-/* input select  */
-.input:focus, .textarea:focus, input[type]:focus {
-    border: 1px solid #ff3860;
-    outline: none !important;
+.footer {
+    margin-top: 2rem;
 }
