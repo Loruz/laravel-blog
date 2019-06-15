@@ -17,7 +17,7 @@ class PostTest extends TestCase
     {
         $post = factory(Post::class)->create();
 
-        $response = $this->get("/post/{$post->id}");
+        $response = $this->get($post->path());
 
         $response->assertSee($post->title);
 
