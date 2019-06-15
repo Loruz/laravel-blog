@@ -2,24 +2,19 @@
 
 namespace App\Console\Commands;
 
-use App\Post;
+use App\Category;
 use Illuminate\Console\Command;
 
-class FakerPost extends Command
+class FakerCategories extends Command
 {
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
-    protected $signature = 'faker:posts {count=1 : Number of post to create}';
+    protected $signature = 'faker:categories {count=1 : Number of categories to create}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Creates fake posts';
+    protected $description = 'Creates fake categories';
 
     /**
      * Execute the console command.
@@ -34,8 +29,8 @@ class FakerPost extends Command
             $count = 1;
         }
 
-        factory(Post::class, $count)->create();
+        factory(Category::class, $count)->create();
 
-        $this->info($count . ' posts created');
+        $this->info($count . ' categories created');
     }
 }
