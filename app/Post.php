@@ -43,10 +43,11 @@ class Post extends Model
     /**
      *  Comments of the post.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     * @return \Illuminate\Database\Eloquent\Relations\hasMany
      */
     public function comments()
     {
+//      return $this->morphToMany(Comment::class, 'commentable')->whereNull('parent_id');
         return $this->hasMany(Comment::class);
     }
 }
