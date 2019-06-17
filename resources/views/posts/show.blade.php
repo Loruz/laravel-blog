@@ -6,8 +6,14 @@
         <h1 class="title is-4">
             {{$post->title}}
         </h1>
-        <small><i>Posted in <a href="category.html">Web Design</a> on <a href="category.html">January 20, 2015</a> by <a
-                    href="category.html">Author</a></i></small>
+        <small><i>Posted in
+                <a href="{{route('category', $post->category->id)}}">{{$post->category->title}}</a>
+                on <a href="{{route('posts.show', $post->id)}}">
+                    {{$post->created_at->format('Y-m-d')}}
+                </a> by
+                <a href="#">{{$post->author->name}}</a>
+            </i>
+        </small>
     </div>
     <div class="content">
         <p>{{$post->content}}</p>

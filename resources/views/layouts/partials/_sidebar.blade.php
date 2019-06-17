@@ -16,17 +16,17 @@
             <a href="contact.html">Contact Page</a>
         </p>
     </aside>
-    <!-- end navigation -->
     <hr/>
-    <!-- post categories -->
     <div class="nav-footer has-text-right">
-        <p><i>
-                <b>
-                    <a href="category.html">Field</a>
-                </b>,
-                <a href="category.html"><b>Category</b></a>,
-                <a href="category.html"><b>Empty</b></a>
-            </i>
+        @if(Route::is('category'))
+            <p><i>Currently in <b><a href="category.html">Field</a></b></i></p>
+        @endif
+        <p>
+            @foreach($categories as $category)
+                <i>
+                    <b><a href="{{route('category', $category->id)}}">{{$category->title}}</a></b>,
+                </i>
+            @endforeach
         </p>
     </div>
 
