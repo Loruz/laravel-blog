@@ -15,3 +15,4 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/post/{post}', 'PostController@show')->name('posts.show');
+Route::get('/category/{category}','CategoryController@index')->name('category');

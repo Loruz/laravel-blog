@@ -2,11 +2,11 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-
     /**
      *  The path to the post.
      *
@@ -47,7 +47,6 @@ class Post extends Model
      */
     public function comments()
     {
-//      return $this->morphToMany(Comment::class, 'commentable')->whereNull('parent_id');
         return $this->hasMany(Comment::class);
     }
 }

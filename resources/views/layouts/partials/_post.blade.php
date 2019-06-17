@@ -6,13 +6,13 @@
                 {{$post->title}}
             </h1>
         </a>
-        <small><i>Posted in <a href="category.html">Web Design</a> on <a href="post.html">January 20, 2015</a> by <a href="category.html">Author</a></i></small>
+        <small><i>Posted in <a href="{{route('category', $post->category->id)}}">{{$post->category->title}}</a> on <a href="{{route('posts.show', $post->id)}}">{{$post->created_at->format('Y-m-d')}}</a> by <a href="category.html">Author</a></i></small>
     </div>
     <div class="content">
         <p>{{$post->description}}</p>
         <div class="content-footer">
             <hr/>
-            <p><a class="button menu-label" href="post.html">Continue Reading</a></p>
+            <p><a class="button menu-label" href="{{route('posts.show', $post->id)}}">Continue Reading</a></p>
         </div>
     </div>
 </div>
