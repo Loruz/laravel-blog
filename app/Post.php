@@ -49,4 +49,12 @@ class Post extends Model
     {
         return $this->hasMany(Comment::class);
     }
+
+    /**
+     * @return string
+     */
+    public function getFormattedDateAttribute()
+    {
+        return $this->created_at->toDateString();
+    }
 }

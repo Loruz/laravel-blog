@@ -9,8 +9,8 @@ class CategoryController extends Controller
 {
     public function index(Category $category)
     {
-        $posts = $category->posts()->get();
+        $posts = $category->posts;
 
-        return view('category', compact('posts'));
+        return view('category', compact('posts', 'category'));
     }
 }

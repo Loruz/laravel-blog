@@ -35,7 +35,7 @@ class Comment extends Model
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
 
-    public function replies ()
+    public function replies()
     {
         return $this->hasMany(Comment::class, 'parent_id');
     }

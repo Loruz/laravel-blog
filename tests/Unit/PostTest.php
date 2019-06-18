@@ -4,6 +4,7 @@ namespace Tests\Unit;
 
 use App\Post;
 use App\User;
+use Carbon\Carbon;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -30,5 +31,17 @@ class PostTest extends TestCase
         $post = factory(Post::class)->create();
 
         $this->assertInstanceOf(User::class, $post->author);
+    }
+
+    /**
+     * @test
+     */
+    public function it_has_formatted_date()
+    {
+        Carbon::setTestNow(Carbon::create(2019, 6, 15));
+
+        $post = factory(Post::class)->create();
+
+        $this->assertEquals('2019-06-15', $post->formattedDate);
     }
 }

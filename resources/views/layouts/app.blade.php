@@ -5,6 +5,7 @@
 <div id="app">
     <div class="main-content">
         <div class="container ">
+{{--            @include('layouts.partials._navbar')--}}
             <div class="columns is-multiline is-mobile is-centered">
                 @include('layouts.partials._sidebar')
                 <div class="column is-8 is-offset-1 is-centered">

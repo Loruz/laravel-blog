@@ -19,12 +19,12 @@
     <hr/>
     <div class="nav-footer has-text-right">
         @if(Route::is('category'))
-            <p><i>Currently in <b><a href="category.html">Field</a></b></i></p>
+            <p><i>Currently in <b><a href="{{route('category', $category)}}">{{$category->title}}</a></b></i></p>
         @endif
         <p>
             @foreach($categories as $category)
                 <i>
-                    <b><a href="{{route('category', $category->id)}}">{{$category->title}}</a></b>,
+                    <b><a href="{{route('category', $category)}}">{{$category->title}}</a></b>,
                 </i>
             @endforeach
         </p>

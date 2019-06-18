@@ -1,8 +1,8 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
 	<div class="navbar-brand">
-		<a class="navbar-item" href="{{route('posts')}}">
-			<span class="has-text-weight-bold">MEDIUM CLONE</span>
-		</a>
+{{--		<a class="navbar-item" href="{{route('posts')}}">--}}
+{{--			<span class="has-text-weight-bold">MEDIUM CLONE</span>--}}
+{{--		</a>--}}
 
 		<a role="button"
 		   class="navbar-burger burger"

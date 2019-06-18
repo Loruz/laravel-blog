@@ -9,7 +9,7 @@
         <small><i>Posted in
                 <a href="{{route('category', $post->category->id)}}">{{$post->category->title}}</a>
                 on <a href="{{route('posts.show', $post->id)}}">
-                    {{$post->created_at->format('Y-m-d')}}
+                    {{$post->formattedDate}}
                 </a> by
                 <a href="#">{{$post->author->name}}</a>
             </i>
