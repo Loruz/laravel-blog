@@ -40,4 +40,21 @@ class CategoryTest extends TestCase
             $response->assertDontSee($post->title);
         });
     }
+    /**
+     * @test
+     */
+    public function it_shows_message_if_no_posts()
+    {
+        $category1 = factory(Category::class)->create();
+        $category2 = factory(Category::class)->create();
+
+        factory(Post::class)->create([
+           'category_id' => $category1->id
+        ]);
+
+        $response = $this->get('/category/'.$category2->id);
+
+        $response->assertSee('No posts with this category');
+
+    }
 }
