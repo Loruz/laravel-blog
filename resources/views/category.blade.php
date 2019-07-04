@@ -1,10 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    @foreach($posts as $post)
+    @forelse($posts as $post)
         @include('layouts.partials._post', $post)
-    @endforeach
+        @include('layouts.partials._pagination')
+        @empty
+        <div class="content">
+            <p >No posts with this category</p>
+        </div>
+    @endforelse
 
-
-    @include('layouts.partials._pagination')
 @endsection
